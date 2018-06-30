@@ -13,3 +13,11 @@
 p:hover{
 	color: white;
 }
+
+p::after{
+	content: url("https://1h4hfe10xz8m3g3xkh2wb9lc-wpengine.netdna-ssl.com/blog/files/2015/08/thestocks-imagem.jpg");
+}
+
+p::before{
+	content: "Preste atenção nesse parágrafo";
+}
