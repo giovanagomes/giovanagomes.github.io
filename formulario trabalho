@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Trabalho P2</title>
+<script>
+numerosValidos = /[^0-9]/;
+letrasValidas = /[^a-zA-Z]/;
+function validacao(){
+//alert("enviado");
+cpf = document.forms["form"]["cpf"].value;
+cep = document.forms["form"]["cep"].value;
+numero = document.forms["form"]["numero"].value;
+rg = document.forms["form"]["rg"].value;
+nome = document.forms["form"]["nome"].value;
+sobrenome = document.forms["form"]["sobrenome"].value;
+bairro = document.forms["form"]["bairro"].value;
+cidade = document.forms["form"]["rg"].value;
+email = document.forms["form"]["email"].value;
+confirmaemail = document.forms["form"]["confirma_email"].value;
+senha = document.forms["form"]["senha"].value;
+confirmasenha = document.forms["form"]["confirma_senha"].value;
+if(cpf.match(numerosValidos) !== null){
+	alert("favor por apenas numeros em cpf");
+}
+if(cep.match(numerosValidos) !== null){
+	alert("favor por apenas numeros em cep");
+}
+if(numero.match(numerosValidos) !== null){
+	alert("favor por apenas numero ");
+}
+if(rg.match(numerosValidos) !== null){
+	alert("favor por apenas numeros em rg");
+}
+if(nome.match(letrasValidos) !== null){
+	alert("favor por apenas letras em nome");
+}
+if(sobrenome.match(letrasValidos) !== null){
+	alert("favor por apenas letras em sobrenome");
+}
+if(bairro.match(letrasValidos) !== null){
+	alert("favor por apenas letras em bairro");
+}
+if(cidade.match(letrasValidos) !== null){
+	alert("favor por apenas letras em cidade");
+}
+if(email.match(email) !== confirmaemail){
+	alert("favor por o email");
+}else
+	alert("favor verificar email");
+}
+if(senha.match(senha) !== confirmasenha){
+	alert("favor por uma senha");
+}else
+	alert("favor verificar senha");
+}
+}
+</script>
+</head>
+<body>
+<h1>Preencha o formulário abaixo</h1>
+<form onsubmit="validacao()" name="form">
+<fieldset>
+<legend>Dados Pessoais</legend>
+<label for="nome">Nome</label>
+<input type="text" id="nome" name="nome">
+<label for="sobrenome">Sobrenome</label>
+<input type="text" id="sobrenome" name="sobrenome">
+<div>
+<label>Sexo:</label>
+<input type="radio" name="sexo" id="masculino">
+<label for="masculino">Masculino</label>
+<input type="radio" name="sexo" id="feminino">
+<label for="feminino">Feminino</label>
+</div>
+<div>
+<label for="nascimento">Nascimento:</label>
+<input type="text" id="nascimento" name="nascimento">
+</div>
+<div>
+<label for="rg">RG:</label>
+<input type="text" id="rg" name="rg">
+</div>
+<div>
+<label for="cpf">CPF:</label>
+<input type="text" id="cpf" name="cpf"><span><!-- - </span><input type="text" id="cpf" name="cpf">-->
+</div>
+</fieldset>
+<fieldset>
+<legend>Dados de Endereço</legend>
+<div>
+<label for="rua">Rua</label>
+<input type="text" id="rua" name="rua">
+<label for="numero">Número</label>
+<input type="text" id="numero" name="numero">
+</div>
+<div>
+<label for="bairro">Bairro:</label>
+<input type="radio" name="bairro" id="masculino">
+</div>
+<div>
+<label for="estado">Estado:</label>
+<select id="estado" name="estado">
+<option value="acre">Acre</option>
+<option value="alagoas">Alagoas</option>
+<option value="amapa">Amapá</option>
+<option value="amazonas">Amazonas</option>
+<option value="bahia">Bahia</option>
+<option value="ceara">Ceará</option>
+<option value="distrito federal">Distrito Federal</option>
+<option value="espirito santo">Espírito Santo</option>
+<option value="goias">Goiás</option>
+<option value="maranhao">Maranhão</option>
+<option value="mato grosso">Mato Grosso</option>
+<option value="mato grosso do sul">Mato Grosso do Sul</option>
+<option value="minas gerais">Minas Gerais</option>
+<option value="para">Pará</option>
+<option value="paraiba">Paraíba</option>
+<option value="parana">Paraná</option>
+<option value="pernambuco">Pernambuco</option>
+<option value="piaui">Piauí</option>
+<option value="rio de janeiro">Rio de Janeiro</option>
+<option value="rio grande do norte">Rio Grande do Norte</option>
+<option value="rio grande so sul">Rio Grande do Sul</option>
+<option value="rondonia">Rondônia</option>
+<option value="roraima">Roraima</option>
+<option value="santa catarina">Santa Catarina</option>
+<option value="sao paulo">São Paulo</option>
+<option value="sergipe">Sergipe</option>
+<option value="tocantins">Tocantins</option>
+</select>
+</div>
+<div>
+<label for="cidade">Cidade:</label>
+<input type="text" id="cidade" name="cidade">
+</div>
+<div>
+<label for="cep">CEP:</label>
+<input type="text" id="cep" name="cep"><span> - </span><input type="text" id="cep" name="cep">
+</div>
+</fieldset>
+<fieldset>
+<legend>Dados de login</legend>
+<div>
+<label for="email">E-mail:</label>
+<input type="email" id="email" name="email">
+</div>
+<div>
+<label for="confirma_email">E-mail:</label>
+<input type="email" id="confirma_email" name="confirma_email">
+</div>
+<div>
+<label for="login">Login de usuário:</label>
+<input type="text" id="login" name="login">
+</div>
+<div>
+<label for="senha">Senha:</label>
+<input type="password" id="senha" name="senha">
+</div>
+<div>
+<label for="confirma_senha">Confirme a senha:</label>
+<input type="password" id="confirma_senha" name="confirma_senha">
+</div>
+</fieldset>
+<fieldset>
+<legend>Pesquisa</legend>
+<div>
+<label>Você deseja trabalhar como Webmaster?</label>
+<input type="radio" name="webmaster" id="sim">
+<label for="sim">Sim</label>
+<input type="radio" name="webmaster" id="nao">
+<label for="nao">Não</label>
+<input type="radio" name="webmaster" id="talvez">
+<label for="talvez">Talvez</label>
+<input type="radio" name="webmaster" id="quem_sabe">
+<label for="quem_sabe">Quem sabe</label>
+</div>
+<div>
+<label>O que voce deseja aprender?</label>
+<input type="checkbox" name="desejo" id="html">
+<label for="html">HTML</label>
+<input type="checkbox" name="desejo" id="css">
+<label for="css">CSS</label>
+<input type="checkbox" name="desejo" id="javascript">
+<label for="javascript">JavaScript</label>
+<input type="checkbox" name="desejo" id="django">
+<label for="django">Django</label>
+</div>
+</fieldset>
+<button type="submit">Enviar</button>
+<button type="button">Limpar</button>
+</form>
+</body>
+</html>trabal
