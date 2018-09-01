@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>P2 ipermidia</title>
+<script>
+numerosValidos = /[^0-9]/;
+letrasValidas = /[^a-zA-Z]/;
+function validacao(){
+//alert("enviado");lue;
+nome = document.forms["form"]["nome"].value;
+email = document.forms["form"]["email"].value;
+confirmaemail = document.forms["form"]["confirma_email"].value;
+datachegada = document.forms["form"]["datachegada"].value;
+datasaida = document.forms["form"]["datasaida"].value;
+qtdquartos = document.forms["form"]["qtdquartos"].value;
+if(nome.match(letrasValidos) !== null){
+	alert("favor por apenas letras em nome");
+}
+if(email.match(email) !== confirmaemail){
+	alert("favor por o email");
+}else
+	alert("favor verificar o email");
+}
+if(datachegada.match(numerosValidos) !== null){
+	alert("favor por a data chegada ");
+}
+if(datasaida.match(numerosValidos) !== null){
+	alert("favor por a data saida ");
+}
+</script>
+<body>
+<h2>hotel</h2><br>
+<form action="#" method="get" id="formulario">
+<fieldset>
+<form onsubmit="validacao()" name="form">
+<fieldset>
+     <legend>Faça a sua reserva</legend>
+<label for="nome">nome</label>
+<input type="text" id="nome" name="nome">
+size=nome"/><br>
+<div>
+<label for="email">E-mail: </label>
+<input type="email" id="iemail" name="email" size="10" maxlength="30" title="E-mail"/><br>
+      <label for="confirmaemail">Confirma o E-mail: </label>
+</div>
+<div>
+     <input type="email" id="iconfirmaemail" name="confirmaemail" size="10" maxlength="30" title="Confirma o E-mail"><br>
+      <label for="dataentrada">Data de Entrada: </label>
+
+      <label for="hospedes">Quantidade de Hospedes: </label>
+      <select id="ihospedes" name="hospedes">
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+      </select><br>
+</div>
+     <label for="qtdquartos">Quantidade de Quartos: </label>
+      <select id="iquartos" name="qtdquartos">
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+      </select><br>
+</div>
+
+    <label for="valor">Valor ser pago: </label>
+    <input id="ivalor" type="text" name="valor" size="10"maxlength="10" title="Valor" readonly="readonly" /><br>
+</fieldset>
+</fieldset>
+<fieldset>
+<legend>Dados de login</legend>
+<div>
+<label for="email">E-mail:</label>
+<input type="email" id="email" name="email">
+</div>
+<div>
+<label for="confirma_email">E-mail:</label>
+<input type="email" id="confirma_email" name="confirma_email">
+</div>
+<div>
+<label for="login">Login de usuário:</label>
+<input type="text" id="login" name="login">
+</div>
+</fieldset>
+<fieldset>
+<legend>Pesquisa</legend>
+<div>
+<label>Você deseja trabalhar como Webmaster?</label>
+<input type="radio" name="webmaster" id="sim">
+<label for="sim">Sim</label>
+<input type="radio" name="webmaster" id="nao">
+<label for="nao">Não</label>
+<input type="radio" name="webmaster" id="talvez">
+<label for="talvez">Talvez</label>
+<input type="radio" name="webmaster" id="quem_sabe">
+<label for="quem_sabe">Quem sabe</label>
+</div>
+<div>
+<label>O que voce deseja aprender?</label>
+<input type="checkbox" name="desejo" id="html">
+<label for="html">HTML</label>
+<input type="checkbox" name="desejo" id="css">
+<label for="css">CSS</label>
+<input type="checkbox" name="desejo" id="javascript">
+<label for="javascript">JavaScript</label>
+<input type="checkbox" name="desejo" id="django">
+<label for="django">Django</label>
+</div>
+</fieldset>
+<button type="submit">Cadastrar</button>
+<button type="button">Limpar</button>
+</form>
+</body>
+</html>
