@@ -3,7 +3,7 @@
 <head>
 <title>P2 ipermidia</title>
 <script>
-numerosValidos = /[^0-9]/;
+numerosValidos = /[^0-'9]/;
 letrasValidas = /[^a-zA-Z]/;
 function validacao(){
 //alert("enviado");lue;
@@ -34,7 +34,7 @@ if(datasaida.match(numerosValidos) !== null){
 <fieldset>
 <form onsubmit="validacao()" name="form">
 <fieldset>
-     <legend>Faça a sua reserva</legend>
+     <legend>Faca a sua reserva</legend>
 <label for="nome">nome</label>
 <input type="text" id="nome" name="nome">
 size=nome"/><br>
@@ -44,9 +44,12 @@ size=nome"/><br>
       <label for="confirmaemail">Confirma o E-mail: </label>
 </div>
 <div>
-     <input type="email" id="iconfirmaemail" name="confirmaemail" size="10" maxlength="30" title="Confirma o E-mail"><br>
-      <label for="dataentrada">Data de Entrada: </label>
+     <input type="email" id="iconfirmaemail" name="confirmaemail" size="10" maxlength="30" title="Confirma o E-mail"><br></div>
 
+     <input type="email" id="iconfirmaemail" name="confirmaemail" size="10" maxlength="30" title="Confirma o E-mail"><br>
+      <label for="datachegada">Data de chegada: </label>
+
+      <label for="datasaida">Data de saida: </label>
       <label for="hospedes">Quantidade de Hospedes: </label>
       <select id="ihospedes" name="hospedes">
 	<option value="1">1</option>
@@ -54,7 +57,7 @@ size=nome"/><br>
 	<option value="3">3</option>
 	<option value="4">4</option>
       </select><br>
-</div>
+
      <label for="qtdquartos">Quantidade de Quartos: </label>
       <select id="iquartos" name="qtdquartos">
 	<option value="1">1</option>
@@ -69,47 +72,11 @@ size=nome"/><br>
 </fieldset>
 </fieldset>
 <fieldset>
-<legend>Dados de login</legend>
-<div>
-<label for="email">E-mail:</label>
-<input type="email" id="email" name="email">
-</div>
-<div>
-<label for="confirma_email">E-mail:</label>
-<input type="email" id="confirma_email" name="confirma_email">
-</div>
-<div>
-<label for="login">Login de usuário:</label>
-<input type="text" id="login" name="login">
-</div>
-</fieldset>
-<fieldset>
-<legend>Pesquisa</legend>
-<div>
-<label>Você deseja trabalhar como Webmaster?</label>
-<input type="radio" name="webmaster" id="sim">
-<label for="sim">Sim</label>
-<input type="radio" name="webmaster" id="nao">
-<label for="nao">Não</label>
-<input type="radio" name="webmaster" id="talvez">
-<label for="talvez">Talvez</label>
-<input type="radio" name="webmaster" id="quem_sabe">
-<label for="quem_sabe">Quem sabe</label>
-</div>
-<div>
-<label>O que voce deseja aprender?</label>
-<input type="checkbox" name="desejo" id="html">
-<label for="html">HTML</label>
-<input type="checkbox" name="desejo" id="css">
-<label for="css">CSS</label>
-<input type="checkbox" name="desejo" id="javascript">
-<label for="javascript">JavaScript</label>
-<input type="checkbox" name="desejo" id="django">
-<label for="django">Django</label>
-</div>
-</fieldset>
-<button type="submit">Cadastrar</button>
-<button type="button">Limpar</button>
-</form>
+    <input type ="button" name="calcular" id="icalcular" onclick="calculaReserva();" value="Calcular">
+    <input type ="submit" name="enviar" onclick="validacao();" value="Enviar">
+    <input type ="reset" name="limpar" value="Limpar">
+    <br>
+    </fieldset>
+  </form>
 </body>
 </html>
